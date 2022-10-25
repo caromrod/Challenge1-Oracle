@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Tu mensaje secreto</title>
+        <meta charset="UTF-8">
+        <meta name="author" content="Carolina Mariel Rodriguez"/>
+        <link rel="stylesheet" href="./css/index.css">
+
+
+        <!--icono de mi pagina-->
+        <link rel="icon" type="icon/x-image" href="./css/img/logo.svg">
+        
+    </head>
+
+<body>
+
+    <div class="contenedor">
+
+            <!--Header con logo -->
+            <header>
+                <a href="./index.html"><img src="./css/img/logo.svg"/></a>
+            </header>
+
+
+            <main>
+                <!--ingrese palabras-->
+                <textarea id="txtIngreseTexto"  placeholder="Ingresa una palabra o frase, crea tu mensaje secreto..."
+                minlength="10" maxlength="100" >
+                </textarea>
+
+                <div class="advertencia">
+                    <img src="./css/img/Vector.png">
+                    <p>Introduzca solo palabras en minuscula y sin acentos</p>
+                </div>
+                
+                <!--botones-->
+                <div class="grupo-botones" id="grupo-botones">
+                        <button type="button" id="btnEncriptar">Encriptar</button>
+                        <button type="button" id="btnDesencriptar">Desencriptar</button>
+                </div>
+            </main>
+
+                <!--ASIDE-->
+
+                <aside>
+
+                    <div id="mensaje2">
+                        <textarea id="lienzo"   minlength="10" maxlength="100"></textarea>
+                        
+                        <button type="button" id="btnCopiar" onclick="copiar1()">Copiar</button>
+                    </div>
+
+                    <div id="mensaje3">
+                        <textarea id="lienzo2"   minlength="10" maxlength="100"></textarea>
+                        
+                        <button type="button" id="btnCopiar2" onclick="copiar2()">Copiar</button>
+                    </div>
+                    
+
+                    <div class="mensaje1" id="mensaje1">
+                        <img src="./css/img/aside.svg"/>
+                        <h1>Ningun mensaje fue encontrado</h1>
+                        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+                    </div>
+            
+                    
+                    
+                </aside>
+            
+    </div>
+
+    <footer>
+        <cite>Desarrollado por Carolina Mariel Rodriguez</cite>
+    </footer>
+
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

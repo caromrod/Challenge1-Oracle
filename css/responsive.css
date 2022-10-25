@@ -1,0 +1,421 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/*---------------------------------------------------*/
+/*                COLORES
+/*---------------------------------------------------*/
+:root
+{
+    --color1:  #609ED4;
+    --color2: #947fe9;
+    --color3: #f488b3;
+    --color4: #e367e3;
+
+
+
+}
+
+/*---------------------------------------------------*/
+/*                 FUENTES
+/*---------------------------------------------------*/
+
+@font-face {
+    font-family: 'Kanit', sans-serif;
+    src: url(../css/fuentes/Kanit-Bold.ttf);
+}
+
+
+/*---------------------------------------------------*/
+/*                 Contenedor general
+/*---------------------------------------------------*/
+
+.contenedor{
+    background-image: linear-gradient(var(--color3), var(--color1), var(--color2));
+    width: 100%;
+    height: 1300px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/*
+*
+*               HEADER CON LOGO
+*
+*/
+
+header{
+
+    display: flex;
+    flex-direction: column;
+
+    height: 1cm;
+    width: 700px;
+    margin-left: 2cm;
+    margin-top: 40px;
+
+}
+
+
+header img{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+
+}
+/*
+*
+*               Main, el contenido principal de la pagina
+*
+*/
+main{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    height: 600px;
+    margin-top: 40px;
+    justify-content: center;
+    margin-left: 2cm;
+
+}
+
+
+
+
+
+/*
+*
+*               TEXTAREA
+*
+*/
+ textarea:first-child{
+
+    font-family: 'Kanit', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    border: none;
+    width: 100%;
+    height: 2cm;
+
+    color: var(--color2);
+    text-align: start;
+
+
+
+}
+/*
+textarea:focus{
+    outline: 0 none;
+}*/
+
+textarea:first-child::placeholder
+{
+
+    font-size:25px;
+    font-family: 'Kanit', sans-serif;
+    font-style: normal;
+
+    
+}
+/*
+*
+*               advertencia
+*
+*/
+
+.advertencia{
+    display: flex;
+    flex-direction: row;
+    margin-top: 250px;
+    margin-bottom: 16px;
+    width: 100%;
+    height: 0.5cm;
+}
+
+.advertencia img{
+    z-index: 1;
+    
+
+    width: 16px;
+    height: 16px;
+
+}
+
+.advertencia p{
+
+
+    width: 500px;
+    height: 30px;
+    margin-left: 8px;
+    font-family: 'Kanit', sans-serif;
+    font-style: normal;
+    font-style: bolder;
+    font-weight: 400;
+    font-size: 20px;
+
+
+
+    z-index: 2;
+
+
+    color: white;
+
+    opacity: 0.8;
+
+
+
+}
+
+/*
+*
+*               BOTONES
+*
+*/
+
+.grupo-botones{
+    display: flex;
+    flex-direction: row;
+
+}
+
+
+
+
+/*
+*
+*               BOTON ENCRIPTAR
+*
+*/
+
+
+#btnEncriptar
+{
+    /* Auto layout */
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: center;
+    color: white;
+    padding: 24px;
+    gap: 8px;
+    font-size: 20px;
+    width: 328px;
+    height: 67px;
+
+    /* Dark blue/dark-blue-300 */
+  
+    background-color: var(--color4);
+    border: solid 1px var(--color4);
+    border-radius: 24px;
+
+
+    cursor: pointer;
+
+    font-family: 'Kanit', sans-serif;
+
+}
+#btnEncriptar:hover, #btnDesencriptar:hover{
+    background: var(--color3);
+}
+
+/*
+*
+*               BOTON DESENCRIPTAR
+*
+*/
+
+#btnDesencriptar
+{
+    /* Auto layout */
+
+    display: flex;
+
+    align-items: flex-start;
+    justify-content: center;
+    color: var(--dark-blue-300);
+    padding: 24px;
+    gap: 8px;
+    color: white;
+    width: 328px;
+    height: 67px;
+
+    margin-left: 0.5cm;
+
+        font-size: 20px;
+
+    background-color: var(--color4);
+    border: solid 1px var(--color4);
+    border-radius: 24px;
+
+
+
+    cursor: pointer;
+
+    font-family: 'Kanit', sans-serif;
+
+}
+
+/*
+*
+*               ASIDE PARA MOSTRAR LOS MENSAJES ENCRIPTADOS O DESENCRIPTADOS
+*
+*/
+
+
+aside{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 10cm;
+
+    margin-top: 1cm;
+    margin-left: 1cm;
+    
+
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+}
+
+
+/*
+*
+*               MENSAJE 1, INICIAL POR DEFECTO
+*
+*/
+
+.mensaje1{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+
+    justify-content: center;
+    align-items: center;
+  
+    width: 1000px;
+
+
+}
+
+aside .mensaje1 img{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+ 
+
+}
+
+aside .mensaje1  h1
+{ 
+    width: 100%;
+    height: 74px;
+
+    font-family: 'Kanit', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    /* or 29px */
+
+    text-align: center;
+
+    /* Gray/gray-500 */
+
+    color: white;
+
+}
+
+ .mensaje1  p
+{
+    /* Ingresa el texto que desees encriptar o desencriptar. */
+
+
+    width: 100%;
+    height: 64px;
+
+    font-family: 'Kanit', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+
+
+    text-align: center;
+
+
+
+    color: white;
+
+
+}
+
+
+
+
+
+/*
+*
+*               BOTON COPIAR
+*
+*/
+
+#btnCopiar, #btnCopiar2{
+
+    width: 100%;
+    height: 2cm;
+    font-family: 'Kanit', sans-serif;
+    font-style: normal;
+    font-size: 20px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    background-color: var(--color4);
+    border: solid 1px var(--color4);
+    border-radius: 24px;
+
+
+    cursor: pointer;
+    
+}
+
+
+
+
+#mensaje2, #mensaje3{
+
+    width: 0;
+    height: 0;
+    font-family: 'Kanit', sans-serif;
+    font-style: larger;
+    font-size: 24px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: var(--color2);
+
+}
+
+
+
+
+textarea:last-child {
+    height: 0;
+    width: 400px;
+    text-align: start;
+}
